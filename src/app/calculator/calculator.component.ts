@@ -15,7 +15,9 @@ OnInit {
   num2:any
   num3:any
   
-  constructor(private user1:UserdetailsService) {}
+  constructor(private user1:UserdetailsService) {
+    console.log("Akshay was here")
+  }
   ngOnInit(): void {}
 
   add(){this.num3=this.num1+this.num2;}
