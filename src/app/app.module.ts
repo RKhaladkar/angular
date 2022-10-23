@@ -35,6 +35,7 @@ import { HttpcompComponent } from './httpcomp/httpcomp.component';
 import { PipeComponent } from './pipes/pipe/pipe.component';
 import { ReversestringPipe } from './pipes/reversestring.pipe';
 import { CrudComponent } from './crud/crud.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -66,7 +67,8 @@ import { CrudComponent } from './crud/crud.component';
     HttpcompComponent,
     PipeComponent,
     ReversestringPipe,
-    CrudComponent
+    CrudComponent,
+    HomeComponent
   
   ],
   imports: [
