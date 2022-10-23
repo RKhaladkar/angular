@@ -1,0 +1,7 @@
+<div>
+<app-child [x]="num1" [y]="num2" [names]='report' [add1]='add'(childevent)="listenevent($event)"></app-child>
+{{displaymsg}}
+</div>
+<!-- <a href="https://www.tutorialspoint.com/html/html_marquees.htm" target="_blank">click here</a>
+<marquee direction="left" >today is the last date of submission of the registration form, kindly submit else you need to pay extra fees</marquee>  -->
+<input type="number" [(ngModel)]="num1">    

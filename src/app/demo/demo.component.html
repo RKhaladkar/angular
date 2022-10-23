@@ -1,0 +1,36 @@
+<!-- 
+ <app-lifecycle></app-lifecycle>
+ <div *ngIf="daycheck;then thenblock else elseblock">
+today is friday
+</div>
+
+<ng-template #thenblock>
+    today is weekend
+</ng-template>
+
+<ng-template #elseblock>
+    weekday
+</ng-template>
+
+<div>{{angular}}</div>
+
+<table class="table table dark">
+    <thead>
+      <tr>
+        <th scope="col">Sr.no.</th>
+        <th scope="col">employees</th>
+        <th scope="col">empcode</th>
+      </tr>
+    </thead>
+    <tr *ngFor="let data of employee index as i">
+        <td>{{i+1}} </td>
+        <td>{{data.empname}} </td>   
+        <td>{{data.empcode}}</td> 
+    </tr> -->
+<div style="text-align: center;" id="login">
+<label> User:<input placeholder="Enter username">
+  <br><br>
+  <label> passward:<input placeholder="Enter passward">
+    <br><br>
+    <button (click)="onclick()">Login</button>
+  

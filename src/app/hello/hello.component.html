@@ -1,0 +1,19 @@
+<p>hello works!</p>
+<div >
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">sr no.</th>
+                <th scope="col">firstname</th>
+                <th scope="col">lastname</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tr scope="row" *ngFor="let student of studentinfo index as i">
+            <td>{{i+1}}</td>
+            <td>{{student.firstname}}</td> 
+            <td>{{student.lastname}}</td> 
+            <td><button (click)="onclick(i)">send</button></td> 
+        </tr>
+    </table>
+</div>

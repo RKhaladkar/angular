@@ -1,0 +1,24 @@
+<div>
+Reverse Pipe: {{ Reverse | reversestring }}
+</div>
+<div>
+    number Pipe: {{ Reverse | lowercase }}
+    <br>
+    upper pipe:  {{Reverse | uppercase|lowercase| reversestring |uppercase}}
+    <br>
+    Currency Pipe:  {{numbercheck|currency}}
+    <br>
+    Currency Pipe: {{numbercheck |currency:'EUR'}}
+    <br>
+    Currency Pipe: {{numbercheck |currency:'INR'}}
+    <br>
+    date Pipe: {{today}}
+    <br>
+    DATE Pipe: {{ today | date}}
+    <br>
+    Currency Pipe: {{ deci|number:'2.0-5'}}
+    <br>
+    Currency Pipe: {{deci | number:'1.0-0'}}
+    
+
+</div>

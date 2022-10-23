@@ -1,0 +1,87 @@
+<form [formGroup]="profile">
+    <div class="one" style="text-align:center">
+        <!-- <img class="comp" src="../../../assets/company.jpeg"> -->
+        <!-- <table class="table table-bordered">
+            <thead>
+                <tr id="table">
+                    <th scope="col">Sr.no.</th>
+                    <th scope="col">Employee name</th>
+                    <th scope="col">Employee code</th>
+                    <th scope="col">Department</th>
+                    <th scope="col">Mobile No.</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id='tablerow'*ngFor="let data of employee index as i">
+                    <td>{{i+1}}</td>
+                    <td>{{data.employee_name}}</td>
+                    <td>{{data.employee_code}}</td>
+                    <td>{{data.department}}</td>
+                    <td>{{data.Mobile_no}}</td>
+                    <td>{{data.Email}}</td>
+                    <td><button (click)="editdata(data)">edit data</button></td>
+                </tr>
+            </tbody>
+        </table> -->
+
+        <!-- <img id="bgi" src="../../assets/google-company-building-corporate.jpg"> -->
+        <h1> Employee details </h1><br>
+
+        <!-- <div class="fields" (mouseover)="onmouseover()"> -->
+
+            <label>Employee Name</label>
+            <span style="color:red">*</span><i class="fas fa-user"></i>:
+            <input class="box" type="text" placeholder="Employee name" formControlName="employee_name">
+            <div
+                *ngIf="(profile.controls['employee_name'].invalid && (profile.controls['employee_name'].dirty||profile.controls['employee_name'].touched) )">
+                Please enter valid Name</div> <br><br>
+
+            <label>Employee code</label>
+            <span style="color:red">*</span>:
+            <input class="box" type="text" placeholder="Employee code" formControlName="employee_code">
+            <div
+                *ngIf="(profile.controls['employee_code'].invalid && (profile.controls['employee_code'].dirty||profile.controls['employee_code'].touched) )">
+                Please enter valid Employee code </div><br><br>
+
+            <label>Department</label>:<input class="box"type="text" placeholder="Department" formControlName="department"><br><br>
+
+            <label>Mobile no</label>
+            <span style="color:red">*</span>:
+            <input class="box" type="text" placeholder="Mobile No" formControlName="Mobile_no">
+            <div
+                *ngIf="profile.controls['Mobile_no'].invalid && (profile.controls['Mobile_no'].dirty||profile.controls['Mobile_no'].touched) ">
+                <div *ngIf="profile.controls['Mobile_no'].errors?.['required']">please enter valid moble no.</div>
+                <div *ngIf="profile.controls['Mobile_no'].errors?.['maxlength']||profile.controls['Mobile_no'].errors?.['minlength']">Enter 10 digits only</div>
+            </div> <br><br>
+
+            <label>E-mail</label>
+            <span style="color:red">*</span>:
+            <input class="box" type="email" placeholder="abc@gmail.com " formControlName="Email">
+            <div
+                *ngIf="(profile.controls['Email'].invalid && (profile.controls['Email'].dirty||profile.controls['Email'].touched) )">
+                Please enter valid Email Id.</div><br>
+
+            <label>Address</label>
+        <span style="color:red">*</span>
+    <input type="text" Placeholder="Enter Address" FormGroupName="address"><br>
+
+    <label>Passward </label>
+        <span style="color:red">*</span><i class="fas fa-unlock-alt"></i>
+    <input type="password" Placeholder="Enter passward" formControlName="passward" [(ngModel)]="passward1"><i class="fas fa-eye"></i><br>
+    <div *ngIf="(profile.controls['passward'].invalid && (profile.controls['passward'].dirty||profile.controls['passward'].touched) )">
+                Please enter valid passward</div>
+
+    <label>Confirm Passward</label>
+        <span style="color:red">*</span><i class="fas fa-unlock-alt"></i>
+    <input  type="password" Placeholder="Re-enter passward" formControlName="confirm_passward"[(ngModel)]="passward2"><i class="fas fa-eye"></i><br>
+    <div
+    *ngIf="(profile.controls['confirm_passward'].invalid && (profile.controls['confirm_passward'].dirty||profile.controls['confirm_passward'].touched) )">
+    Please enter valid passward</div>
+    <div *ngIf="((profile.controls['passward'].valid)&&(profile.controls['confirm_passward'].touched))&&(passward1!=passward2)"> Please enter same passward as provided in above field</div><br>
+
+<button class="add1" style="background-color:brown" type="reset" (click)="reset()" style="font-weight:500 ;">Reset</button>
+<button id="b2" (click)="update()" style="font-weight:500 ;">update</button><br><br>
+
+</div>

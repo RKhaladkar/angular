@@ -1,0 +1,26 @@
+<!-- 
+<marquee id="welcome"> WELCOME {{username}} </marquee>
+
+{{result}} -->
+
+<table>
+    <tr>
+        <th>Email</th>
+        <th>passward</th> 
+        <th>Edit</th>
+        <th>Delete</th>       
+    </tr>
+    <tr *ngFor="let user of place">
+        <td>{{user.email}}</td>
+        <td>{{user.passward}}</td>
+        <td><button (click) = "edit(user)" > edit </button></td>
+        <td><button (click) = "delete(user)" > delete </button></td>
+    </tr>
+</table><br>
+<form [formGroup]="data">
+<label>Email:</label><input placeholder="Enter Email ID" formControlName="email">
+<br>
+    <label>Passward:</label><input type="text" formControlName="passward" placeholder="Passward" >
+
+    </form>
+    <button >Update</button>

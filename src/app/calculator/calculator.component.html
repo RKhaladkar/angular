@@ -1,0 +1,16 @@
+<div id="calculator">
+    <h1 style="text-align:center" ><b>CALCULATOR</b> </h1>  <br>
+
+    <div style="text-align:center"> <br>
+
+        <input type="number" placeholder="enter first number"  [(ngModel)]="num1" >
+        <input type="number" placeholder="enter second number" [(ngModel)]="num2" > <br><br>
+        <div style="color: rgb(241, 37, 139);">
+        <button class="button"(click)="add()">ADDITION</button>
+        <button class="button"(click)="sub()">SUB</button>
+        <button class="button"(click)="mul()">MUL</button>
+        <button class="button"(click)="div()">DIV</button><BR><br>
+        </div>
+        <h2>Result:{{num3}}</h2>
+    </div>
+</div>
